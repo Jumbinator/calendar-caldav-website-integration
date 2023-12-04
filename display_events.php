@@ -3,7 +3,7 @@
 include 'iCalParser.php';
 $file = 'https://p109-caldav.icloud.com/published/2/MTAyMTQ3MTU4OTAxMDIxNLIYbaRwAhcWGum4NLPEID38xPzy9FnK20AgEyZYfDAgqAhwPWyOqqP3wQ-2X0Q276hTKRcQl60bWM7RPZqMyUU';
 $iCal = new iCal($file);
-//Get all ical-objects of the current year
+//Get all ical-objects of since the beginning of the current year
 $events = $iCal->eventsByDateSince(substr(date('Y.m.d'), 0, 4) . '-01-01');
 
 // display header for table
